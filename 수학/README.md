@@ -18,3 +18,5 @@ def LCM(gcd, n, m):
     return (n * m) // gcd
 ```
 [PR: 최대공약수와 최소공배수](https://github.com/Kwakcena/codeplus-SW-competency/pull/1)
+[PR: 최소공배수](https://github.com/Kwakcena/codeplus-SW-competency/pull/2)
+
