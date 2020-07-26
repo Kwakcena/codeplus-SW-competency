@@ -3,6 +3,24 @@ def test_eratos():
     assert eratos(100) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,
                            43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
+def test_find_prime_number():
+    assert find_prime_number(2) == True
+    assert find_prime_number(3) == True
+    assert find_prime_number(4) == False
+    assert find_prime_number(100) == False
+    assert find_prime_number(19) == True
+
+
+def find_prime_number(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if not n % i:
+            return False
+        i += 1
+    return True
+
 
 def eratos(m):
     check = [False] * (m + 1)
