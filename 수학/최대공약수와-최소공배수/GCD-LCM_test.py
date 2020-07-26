@@ -8,8 +8,7 @@ n, m = map(int, input().split())
 g = GCD(n, m)
 l = LCM(g, n, m)
 
-print(g)
-print(l)
+print(f"{g}\n{l}")
 
 def test_GCD():
     assert GCD(24, 18) == 6
