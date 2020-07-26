@@ -19,4 +19,4 @@ def LCM(gcd, n, m):
 ```
 - [PR: 최대공약수와 최소공배수](https://github.com/Kwakcena/codeplus-SW-competency/pull/1)
 - [PR: 최소공배수](https://github.com/Kwakcena/codeplus-SW-competency/pull/2)
-
+- [PR: GCD 합](https://github.com/Kwakcena/codeplus-SW-competency/pull/3) : `itertools` 모듈 사용법
