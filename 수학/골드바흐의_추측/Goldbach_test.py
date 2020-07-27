@@ -16,6 +16,8 @@ def get_glodbach(n, primes, check):
     for prime in primes:
         if not check[n - prime]:
             return f"{n} = {prime} + {n - prime}"
+        if n < prime:
+            break
     return "Goldbach's conjecture is wrong."
 
 
