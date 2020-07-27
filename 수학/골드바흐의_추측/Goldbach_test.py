@@ -12,14 +12,18 @@ def prime_number_list(m):
     return [prime_numbers, check]
 
 
+def get_glodbach(n, primes, check):
+    for prime in primes:
+        if not check[n - prime]:
+            return f"{n} = {prime} + {n - prime}"
+    return "Goldbach's conjecture is wrong."
+
+
 if __name__ == "__main__":
     n = 0
+    [primes, check] = prime_number_list(1000000)
     while True:
         n = int(input())
-        [primes, check] = prime_number_list(n)
-        for prime in primes:
-            if not check[n - prime]:
-                print(f"{n} = {prime} + {n - prime}")
-                break
         if not n:
             break
+        print(get_glodbach(n, primes, check))
