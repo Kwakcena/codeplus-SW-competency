@@ -49,3 +49,11 @@ def eratos(m):
     return [prime_numbers, check]
 ```
 - [PR: 소수 찾기](https://github.com/Kwakcena/codeplus-SW-competency/pull/4)
+
+## 골드바흐의 추측
+```
+- 2보다 큰 모든 짝수는 두 소수의 합으로 표현 가능하다
+- 5보다 큰 모든 홀수는 세 소수의 합으로 표현 가능하다.
+- 10^18 이하에서는 참인 것이 증명되어 있다.
+```
+- [PR: 골드바흐의 추측](https://github.com/Kwakcena/codeplus-SW-competency/pull/5)
