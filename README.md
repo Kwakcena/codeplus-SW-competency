@@ -8,7 +8,7 @@
 - [X] [골드바흐의 추측](https://github.com/Kwakcena/codeplus-SW-competency/pull/5)
 
 ## 브루트 포스
-- [ ] 일곱 난쟁이
+- [X] [일곱 난쟁이](https://github.com/Kwakcena/codeplus-SW-competency/pull/6) : python에서 여러 줄 입력받기
 - [ ] 날짜 계산
 - [ ] 테트로미노
 - [ ] 1, 2, 3 더하기
