@@ -3,7 +3,6 @@ n, m = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(n)]
 
 max = 0
-total = 0
 
 for i in range(n):
     for j in range(m):
@@ -53,7 +52,7 @@ for i in range(n):
             if temp > max:
                 max = temp
         if i + 2 < n and j + 1 < m:
-            temp = board[i][j] + board[i + 1][j] + board[i + 1][j + 1] + \
+            temp = board[i][j] + board[i][j + 1] + board[i + 1][j + 1] + \
                    board[i + 2][j + 1]
             if temp > max:
                 max = temp
@@ -97,14 +96,15 @@ for i in range(n):
 
         if i + 2 < n:
             temp = board[i][j] + board[i + 1][j] + board[i + 2][j]
+            if j + 1 < m:
+                temp2 = temp + board[i + 1][j + 1]
+                if temp2 > max:
+                    max = temp2
+
             if j - 1 >= 0:
                 temp2 = temp + board[i + 1][j - 1]
                 if temp2 > max:
                     max = temp2
 
-            if j + 1 < m:
-                temp2 = temp + board[i + 1][j + 1]
-                if temp2 > max:
-                    max = temp2
 
 print(max)
