@@ -9,7 +9,7 @@
 
 ## 브루트 포스
 - [X] [일곱 난쟁이](https://github.com/Kwakcena/codeplus-SW-competency/pull/6) : python에서 여러 줄 입력받기
-- [ ] 날짜 계산
+- [X] [날짜 계산](https://github.com/Kwakcena/codeplus-SW-competency/pull/7)
 - [ ] 테트로미노
 - [ ] 1, 2, 3 더하기
 - [ ] 다음 순열
