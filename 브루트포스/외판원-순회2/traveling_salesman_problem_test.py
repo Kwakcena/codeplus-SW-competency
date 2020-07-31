@@ -13,32 +13,24 @@ def next_permutation(nums):
     return nums
 
 
-def get_permutations(nums):
-    permutations = []
-    while nums != -1:
-        permutations.append(nums[:])
-        nums = next_permutation(nums)
-    return permutations
-
-
 if __name__ == "__main__":
     min = 1000001
     n = int(input())
     nums = [num for num in range(n)]
     board = [list(map(int, input().split())) for _ in range(n)]
 
-    routes = get_permutations(nums)
-    for route in routes:
-        total = 0
-        for i in range(len(route)):
-            start = route[i]
-            if i == len(route) - 1:
-                end = route[0]
+    while nums != -1:
+        sum = 0
+        ok = True
+        for i in range(len(nums) - 1):
+            if not board[nums[i]][nums[i + 1]]:
+                ok = False
             else:
-                end = route[i + 1]
-            total += board[start][end]
-        if total < min:
-            min = total
-        print(route, total)
+                sum += board[nums[i]][nums[i + 1]]
+        if ok and board[nums[len(nums) - 1]][nums[0]] != 0:
+            sum += board[nums[len(nums) - 1]][nums[0]]
+            if min > sum:
+                min = sum
+        nums = next_permutation(nums)
 
     print(min)
