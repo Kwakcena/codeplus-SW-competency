@@ -13,11 +13,11 @@
 - [X] [테트로미노](https://github.com/Kwakcena/codeplus-SW-competency/pull/8) : python에서 2차원 배열 입력받기
 - [X] [1, 2, 3 더하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/9)
 - [X] [다음 순열](https://github.com/Kwakcena/codeplus-SW-competency/pull/10)
-- [ ] 이전 순열
-- [ ] 모든 순열
-- [ ] 차이를 최대로
-- [ ] 외판원 순회 2
-- [ ] 로또
+- [X] [이전 순열](https://github.com/Kwakcena/codeplus-SW-competency/pull/11)
+- [X] [모든 순열](https://github.com/Kwakcena/codeplus-SW-competency/pull/12)
+- [X] [차이를 최대로](https://github.com/Kwakcena/codeplus-SW-competency/pull/13)
+- [X] [외판원 순회 2](https://github.com/Kwakcena/codeplus-SW-competency/pull/14)
+- [X] [로또](https://github.com/Kwakcena/codeplus-SW-competency/pull/15)
 - [ ] 연산자 끼워넣기
 - [ ] 암호 만들기
 - [ ] 부분집합의 합
