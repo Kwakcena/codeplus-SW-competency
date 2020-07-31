@@ -14,7 +14,7 @@ def next_permutation(nums):
 
 
 if __name__ == "__main__":
-    min = 1000001
+    min = float('inf')
     n = int(input())
     nums = [num for num in range(n)]
     board = [list(map(int, input().split())) for _ in range(n)]
@@ -25,7 +25,7 @@ if __name__ == "__main__":
         sum = 0
         ok = True
         for i in range(len(nums) - 1):
-            if not board[nums[i]][nums[i + 1]]:
+            if board[nums[i]][nums[i + 1]] == 0:
                 ok = False
             else:
                 sum += board[nums[i]][nums[i + 1]]
