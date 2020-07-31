@@ -20,6 +20,8 @@ if __name__ == "__main__":
     board = [list(map(int, input().split())) for _ in range(n)]
 
     while nums != -1:
+        if nums[0] != 0:
+            break
         sum = 0
         ok = True
         for i in range(len(nums) - 1):
