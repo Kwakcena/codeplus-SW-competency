@@ -1,4 +1,3 @@
-inf = -10 ** 9
 n = int(input())
 t = [0] * (n + 1)
 p = [0] * (n + 1)
@@ -17,8 +16,8 @@ def go(day, s):
     if day > n + 1:
         return
 
-    go(day + 1, s)
     go(day + t[day], s + p[day])
+    go(day + 1, s)
 
 
 go(1, 0)
