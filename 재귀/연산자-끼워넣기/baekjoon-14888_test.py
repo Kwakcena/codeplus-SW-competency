@@ -21,7 +21,6 @@ def go(nums, index, cur, plus, minus, mul, div):
             res.append(go(nums, index + 1, -(-cur // nums[index]), plus, minus, mul, div - 1))
         else:
             res.append(go(nums, index + 1, cur // nums[index], plus, minus, mul, div - 1))
-    print(res)
     ans = (max([t[0] for t in res]), min([t[1] for t in res]))
     return ans
 
