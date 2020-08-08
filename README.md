@@ -11,17 +11,17 @@
 - [X] [일곱 난쟁이](https://github.com/Kwakcena/codeplus-SW-competency/pull/6) : python에서 여러 줄 입력받기
 - [X] [날짜 계산](https://github.com/Kwakcena/codeplus-SW-competency/pull/7)
 - [X] [테트로미노](https://github.com/Kwakcena/codeplus-SW-competency/pull/8) : python에서 2차원 배열 입력받기
-- [X] [1, 2, 3 더하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/9)
+- [X] [1, 2, 3 더하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/9) / [1, 2, 3 더하기 - 재귀](https://github.com/Kwakcena/codeplus-SW-competency/pull/18)
 - [X] [다음 순열](https://github.com/Kwakcena/codeplus-SW-competency/pull/10)
 - [X] [이전 순열](https://github.com/Kwakcena/codeplus-SW-competency/pull/11)
 - [X] [모든 순열](https://github.com/Kwakcena/codeplus-SW-competency/pull/12)
 - [X] [차이를 최대로](https://github.com/Kwakcena/codeplus-SW-competency/pull/13)
 - [X] [외판원 순회 2](https://github.com/Kwakcena/codeplus-SW-competency/pull/14)
-- [X] [로또](https://github.com/Kwakcena/codeplus-SW-competency/pull/15)
-- [ ] 연산자 끼워넣기
-- [ ] 암호 만들기
-- [ ] 부분집합의 합
-- [ ] 퇴사
+- [X] [로또](https://github.com/Kwakcena/codeplus-SW-competency/pull/15) / [로또 - 재귀](https://github.com/Kwakcena/codeplus-SW-competency/pull/20)
+- [X] [연산자 끼워넣기](https://github.com/Kwakcena/codeplus-SW-competency/pull/17) / [연산자 끼워넣기 - 재귀](https://github.com/Kwakcena/codeplus-SW-competency/pull/23)
+- [X] [암호 만들기](https://github.com/Kwakcena/codeplus-SW-competency/pull/19)
+- [X] [부분집합의 합](https://github.com/Kwakcena/codeplus-SW-competency/pull/21)
+- [X] [퇴사](https://github.com/Kwakcena/codeplus-SW-competency/pull/22)
 - [ ] 연산자 끼워넣기 (2)
 - [ ] 집합
 
