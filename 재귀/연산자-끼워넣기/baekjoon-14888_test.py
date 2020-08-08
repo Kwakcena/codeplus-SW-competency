@@ -1,18 +1,9 @@
-max, min = -10 ** 10, 10 ** 10
-
-n = int(input())
-nums = list(map(int, input().split()))
-plus, minus, mul, div = map(int, input().split())
 
 def go(nums, index, cur, plus, minus, mul, div):
-    global min, max
     # answer
-    if index == n:
-        if min > cur:
-            min = cur
-        if max < cur:
-            max = cur
-        return
+    if index == len(nums):
+        return (cur, cur)
+    res = []
 
     # impossible
     if index > n:
@@ -20,19 +11,24 @@ def go(nums, index, cur, plus, minus, mul, div):
 
     # next
     if plus > 0:
-        go(nums, index + 1, cur + nums[index], plus - 1, minus, mul, div)
+        res.append(go(nums, index + 1, cur + nums[index], plus - 1, minus, mul, div))
     if minus > 0:
-        go(nums, index + 1, cur - nums[index], plus, minus - 1, mul, div)
+        res.append(go(nums, index + 1, cur - nums[index], plus, minus - 1, mul, div))
     if mul > 0:
-        go(nums, index + 1, cur * nums[index], plus, minus, mul - 1, div)
+        res.append(go(nums, index + 1, cur * nums[index], plus, minus, mul - 1, div))
     if div > 0:
         if cur < 0:
-            go(nums, index + 1, -(-cur // nums[index]), plus, minus, mul, div - 1)
+            res.append(go(nums, index + 1, -(-cur // nums[index]), plus, minus, mul, div - 1))
         else:
-            go(nums, index + 1, cur // nums[index], plus, minus, mul, div - 1)
+            res.append(go(nums, index + 1, cur // nums[index], plus, minus, mul, div - 1))
+    print(res)
+    ans = (max([t[0] for t in res]), min([t[1] for t in res]))
+    return ans
 
+n = int(input())
+nums = list(map(int, input().split()))
+plus, minus, mul, div = map(int, input().split())
+ans = go(nums, 1, nums[0], plus, minus, mul, div)
 
-go(nums, 1, nums[0], plus, minus, mul, div)
-
-print(max)
-print(min)
+print(ans[0])
+print(ans[1])
