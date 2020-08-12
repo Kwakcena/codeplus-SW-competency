@@ -22,7 +22,7 @@
 - [X] [암호 만들기](https://github.com/Kwakcena/codeplus-SW-competency/pull/19)
 - [X] [부분집합의 합](https://github.com/Kwakcena/codeplus-SW-competency/pull/21)
 - [X] [퇴사](https://github.com/Kwakcena/codeplus-SW-competency/pull/22)
-- [ ] 연산자 끼워넣기 (2)
+- [X] [연산자 끼워넣기 (2)](https://github.com/Kwakcena/codeplus-SW-competency/pull/23)
 - [ ] 집합
 
 ## 브루트 포스 (N과 M 연습)
