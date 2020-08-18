@@ -40,8 +40,8 @@
 - [ ] N과 M(12)
 
 ## 그래프와 BFS
-- [ ] ABCDE
-- [ ] DFS와 BFS
+- [X] [ABCDE](https://github.com/Kwakcena/codeplus-SW-competency/pull/27)
+- [X] [DFS와 BFS](https://github.com/Kwakcena/codeplus-SW-competency/pull/26)
 - [ ] 연결 요소
 - [ ] 이분 그래프
 - [ ] 단지번호붙이기
