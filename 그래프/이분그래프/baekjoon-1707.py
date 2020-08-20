@@ -7,14 +7,10 @@ def dfs(vertex, color, visited, adj_list):
     visited[vertex] = color
     for next in adj_list[vertex]:
         if visited[next] == 0:
-            dfs(next, 3 - color, visited, adj_list)
-
-
-def check(visited, adj_lists):
-    for current_node, adj_list in enumerate(adj_lists):
-        for next_node in adj_list:
-            if visited[current_node] == visited[next_node]:
+            if not dfs(next, 3 - color, visited, adj_list):
                 return False
+        elif visited[next] == visited[vertex]:
+            return False
     return True
 
 
@@ -30,9 +26,11 @@ if __name__ == "__main__":
             adj_list[u].append(v)
             adj_list[v].append(u)
 
+        ans = True
         for start in range(1, V + 1):
-            if not visited[start]:
-                dfs(start, 1, visited, adj_list)
-        print("YES" if check(visited, adj_list) else "NO")
+            if visited[start] == 0:
+                if not dfs(start, 1, visited, adj_list):
+                    ans = False
+        print("YES" if ans else "NO")
 
         test_case -= 1
