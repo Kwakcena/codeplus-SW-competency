@@ -1,5 +1,5 @@
 import sys
-from collections import Counter
+from collections import Counter, deque
 from functools import reduce
 
 N = int(sys.stdin.readline())
@@ -13,6 +13,7 @@ address_number = 0
 dy = [-1, 1, 0, 0]
 dx = [0, 0, -1, 1]
 
+
 def dfs(y, x, number):
     visited[y][x] = number
     for i in range(4):
@@ -22,18 +23,32 @@ def dfs(y, x, number):
             if field[new_y][new_x] == 1 and visited[new_y][new_x] == 0:
                 dfs(new_y, new_x, number)
 
+
+def bfs(y, x, number):
+    q = deque()
+    q.append((y, x))
+    visited[y][x] = number
+
+    while q:
+        y, x = q.popleft()
+        for i in range(4):
+            new_x = x + dx[i]
+            new_y = y + dy[i]
+            if N > new_x >= 0 and N > new_y >= 0:
+                if field[new_y][new_x] == 1 and visited[new_y][new_x] == 0:
+                    q.append((new_y, new_x))
+                    visited[new_y][new_x] = number
+
+
 for y in range(N):
     for x in range(N):
         if field[y][x] == 1 and visited[y][x] == 0:
             address_number += 1
-            dfs(y, x, address_number)
+            # dfs(y, x, address_number)
+            bfs(y, x, address_number)
 
-print(address_number)
-# visited 2차원 리스트를 1차원 리스트로 만들어 준다.
 ans = reduce(lambda x, y: x + y, visited)
-# ans 1차원 배열에 있는 값 중 0보다 큰 값만 남겨놓는다.
 ans = [x for x in ans if x > 0]
-# Counter로 ans 리스트에 있는 숫자들을 카운트 하여 딕셔너리로 반환하고,
-# 해당 딕셔너리의 값만 모아서 list로 만들어 오름차순으로 정렬한다.
 ans = sorted(list(Counter(ans).values()))
+print(address_number)
 print('\n'.join(map(str, ans)))
