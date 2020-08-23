@@ -42,11 +42,11 @@
 ## 그래프와 BFS
 - [X] [ABCDE](https://github.com/Kwakcena/codeplus-SW-competency/pull/27)
 - [X] [DFS와 BFS](https://github.com/Kwakcena/codeplus-SW-competency/pull/26)
-- [ ] 연결 요소
-- [ ] 이분 그래프
-- [ ] 단지번호붙이기
+- [X] [연결 요소](https://github.com/Kwakcena/codeplus-SW-competency/pull/28)
+- [X] [이분 그래프](https://github.com/Kwakcena/codeplus-SW-competency/pull/30)
+- [X] [단지번호붙이기](https://github.com/Kwakcena/codeplus-SW-competency/pull/31)
 - [ ] 섬의 개수
-- [ ] 미로 탐색
+- [X] [미로 탐색](https://github.com/Kwakcena/codeplus-SW-competency/pull/32)
 - [ ] 토마토
 - [ ] 숨바꼭질
 - [ ] 이모티콘
