@@ -1,32 +1,27 @@
 from collections import deque
 
-MAX = 10000
+n = int(input())
 
-def bfs(goal):
-    q = deque()
-    # (현재 화면의 이모티콘, 클립보드에 있는 이모티콘, time)
-    q.append((1, 0, 0))
+dist = [[-1] * (n + 1) for _ in range(n + 1)]
+q = deque()
+q.append((1, 0))
+dist[1][0] = 0
 
-    check = [[False] * MAX for _ in range(MAX)]
-    check[1][0] = True
+while q:
+    s, c = q.popleft()
+    if dist[s][s] == -1:
+        dist[s][s] = dist[s][c] + 1
+        q.append((s, s))
+    if s + c <= n and dist[s + c][c] == -1:
+        dist[s + c][c] = dist[s][c] + 1
+        q.append((s + c, c))
+    if s - 1 >= 0 and dist[s - 1][c] == -1:
+        dist[s - 1][c] = dist[s][c] + 1
+        q.append((s - 1, c))
 
-    while q:
-        display_emoticon, clipboard, time = q.popleft()
-        if display_emoticon == goal:
-            return time
-        for next_display_emoticon, next_clipboard, next_time in [
-            (display_emoticon, display_emoticon, time + 1),
-            (display_emoticon + clipboard, clipboard, time + 1),
-            (display_emoticon - 1, clipboard, time + 1)
-        ]:
-            if 0 <= display_emoticon <= MAX:
-                if check[next_display_emoticon][next_clipboard] == 0:
-                    q.append((next_display_emoticon, next_clipboard, next_time))
-                    check[next_display_emoticon][next_clipboard] = True
-    return
-
-def solution():
-    goal = int(input())
-    print(bfs(goal))
-
-solution()
+ans = -1
+for i in range(n+1):
+    if dist[n][i] != -1:
+        if ans == -1 or ans > dist[n][i]:
+            ans = dist[n][i]
+print(ans)
