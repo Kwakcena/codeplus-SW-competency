@@ -45,15 +45,15 @@
 - [X] [연결 요소](https://github.com/Kwakcena/codeplus-SW-competency/pull/28)
 - [X] [이분 그래프](https://github.com/Kwakcena/codeplus-SW-competency/pull/30)
 - [X] [단지번호붙이기](https://github.com/Kwakcena/codeplus-SW-competency/pull/31)
-- [ ] 섬의 개수
+- [X] [섬의 개수](https://github.com/Kwakcena/codeplus-SW-competency/pull/40)
 - [X] [미로 탐색](https://github.com/Kwakcena/codeplus-SW-competency/pull/32)
 - [X] [토마토](https://github.com/Kwakcena/codeplus-SW-competency/pull/33)
 - [X] [숨바꼭질](https://github.com/Kwakcena/codeplus-SW-competency/pull/34)
 - [X] [이모티콘](https://github.com/Kwakcena/codeplus-SW-competency/pull/35)
 - [X] [숨바꼭질 3](https://github.com/Kwakcena/codeplus-SW-competency/pull/36)
 - [X] [알고스팟](https://github.com/Kwakcena/codeplus-SW-competency/pull/37)
-- [ ] 벽 부수고 이동하기
-- [ ] 탈출
+- [X] [벽 부수고 이동하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/38)
+- [X] [탈출](https://github.com/Kwakcena/codeplus-SW-competency/pull/39)
 
 ## 다이나믹 프로그래밍
 - [ ] 1로 만들기
