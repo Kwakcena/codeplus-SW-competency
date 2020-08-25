@@ -24,7 +24,7 @@ while q:
                 q.append((ny, nx, wall + 1))
 
 if check[n - 1][m - 1][0] != 0 and check[n - 1][m - 1][1] != 0:
-    print(min(check([n - 1][m - 1])))
+    print(min(check[n - 1][m - 1]))
 elif check[n - 1][m - 1][0] != 0:
     print(check[n - 1][m - 1][0])
 elif check[n - 1][m - 1][1] != 0:
