@@ -50,7 +50,7 @@
 - [X] [1로 만들기](https://github.com/Kwakcena/codeplus-SW-competency/pull/45)
 - [X] [2×n 타일링](https://github.com/Kwakcena/codeplus-SW-competency/pull/46)
 - [X] [2×n 타일링 2](https://github.com/Kwakcena/codeplus-SW-competency/pull/47)
-- [ ] 1, 2, 3 더하기
+- [X] [1, 2, 3 더하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/48)
 - [ ] 1, 2, 3 더하기 3
 - [ ] 카드 구매하기
 - [ ] 카드 구매하기 2
