@@ -51,7 +51,7 @@
 - [X] [2×n 타일링](https://github.com/Kwakcena/codeplus-SW-competency/pull/46)
 - [X] [2×n 타일링 2](https://github.com/Kwakcena/codeplus-SW-competency/pull/47)
 - [X] [1, 2, 3 더하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/48)
-- [ ] 1, 2, 3 더하기 3
+- [X] [1, 2, 3 더하기 3](https://github.com/Kwakcena/codeplus-SW-competency/pull/49)
 - [ ] 카드 구매하기
 - [ ] 카드 구매하기 2
 - [ ] 1, 2, 3 더하기 5
