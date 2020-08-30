@@ -26,18 +26,9 @@
 - [X] [집합](https://github.com/Kwakcena/codeplus-SW-competency/pull/25)
 
 ## 브루트 포스 (N과 M 연습)
-- [ ] N과 M(1)
-- [ ] N과 M(2)
-- [ ] N과 M(3)
-- [ ] N과 M(4)
-- [ ] N과 M(5)
-- [ ] N과 M(6)
-- [ ] N과 M(7)
-- [ ] N과 M(8)
-- [ ] N과 M(9)
-- [ ] N과 M(10)
-- [ ] N과 M(11)
-- [ ] N과 M(12)
+- [X] [N과 M(1 ~ 4)](https://github.com/Kwakcena/codeplus-SW-competency/pull/42)
+- [X] [N과 M(5 ~ 8)](https://github.com/Kwakcena/codeplus-SW-competency/pull/43)
+- [X] [N과 M(9 ~ 12)](https://github.com/Kwakcena/codeplus-SW-competency/pull/44)
 
 ## 그래프와 BFS
 - [X] [ABCDE](https://github.com/Kwakcena/codeplus-SW-competency/pull/27)
