@@ -47,7 +47,7 @@
 - [X] [탈출](https://github.com/Kwakcena/codeplus-SW-competency/pull/39)
 
 ## 다이나믹 프로그래밍
-- [ ] 1로 만들기
+- [X] [1로 만들기](https://github.com/Kwakcena/codeplus-SW-competency/pull/45)
 - [ ] 2×n 타일링
 - [ ] 2×n 타일링 2
 - [ ] 1, 2, 3 더하기
