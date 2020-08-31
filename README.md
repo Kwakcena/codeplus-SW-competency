@@ -56,7 +56,7 @@
 - [X] [카드 구매하기 2](https://github.com/Kwakcena/codeplus-SW-competency/pull/51)
 - [X] [1, 2, 3 더하기 5](https://github.com/Kwakcena/codeplus-SW-competency/pull/52)
 - [X] [쉬운 계단 수](https://github.com/Kwakcena/codeplus-SW-competency/pull/53)
-- [ ] 오르막 수
+- [X] [오르막 수](https://github.com/Kwakcena/codeplus-SW-competency/pull/54)
 - [ ] 이친수
 - [ ] 스티커
 - [ ] 포도주 시식
