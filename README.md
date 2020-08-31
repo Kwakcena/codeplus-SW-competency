@@ -53,7 +53,7 @@
 - [X] [1, 2, 3 더하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/48)
 - [X] [1, 2, 3 더하기 3](https://github.com/Kwakcena/codeplus-SW-competency/pull/49)
 - [X] [카드 구매하기](https://github.com/Kwakcena/codeplus-SW-competency/pull/50)
-- [ ] 카드 구매하기 2
+- [X] [카드 구매하기 2](https://github.com/Kwakcena/codeplus-SW-competency/pull/51)
 - [ ] 1, 2, 3 더하기 5
 - [ ] 쉬운 계단 수
 - [ ] 오르막 수
