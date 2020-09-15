@@ -58,7 +58,7 @@
 - [X] [쉬운 계단 수](https://github.com/Kwakcena/codeplus-SW-competency/pull/53)
 - [X] [오르막 수](https://github.com/Kwakcena/codeplus-SW-competency/pull/54)
 - [X] [이친수](https://github.com/Kwakcena/codeplus-SW-competency/pull/55)
-- [ ] 스티커
+- [X] [스티커](https://github.com/Kwakcena/codeplus-SW-competency/pull/56)
 - [ ] 포도주 시식
 - [ ] 가장 긴 증가하는 부분 수열
 - [ ] 가장 긴 증가하는 부분 수열 4
