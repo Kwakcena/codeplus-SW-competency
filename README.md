@@ -64,7 +64,7 @@
 - [X] [가장 긴 증가하는 부분 수열 4](https://github.com/Kwakcena/codeplus-SW-competency/pull/59)
 - [X] [가장 큰 증가하는 부분 수열](https://github.com/Kwakcena/codeplus-SW-competency/pull/60)
 - [X] [가장 긴 감소하는 부분 수열](https://github.com/Kwakcena/codeplus-SW-competency/pull/61)
-- [ ] 가장 긴 바이토닉 부분 수열
+- [X] [가장 긴 바이토닉 부분 수열](https://github.com/Kwakcena/codeplus-SW-competency/pull/62)
 - [ ] 연속합
 - [ ] 연속합 2
 - [ ] 제곱수의 합
