@@ -61,7 +61,7 @@
 - [X] [스티커](https://github.com/Kwakcena/codeplus-SW-competency/pull/56)
 - [X] [포도주 시식](https://github.com/Kwakcena/codeplus-SW-competency/pull/57)
 - [X] [가장 긴 증가하는 부분 수열](https://github.com/Kwakcena/codeplus-SW-competency/pull/58)
-- [ ] 가장 긴 증가하는 부분 수열 4
+- [X] [가장 긴 증가하는 부분 수열 4](https://github.com/Kwakcena/codeplus-SW-competency/pull/59)
 - [ ] 가장 큰 증가하는 부분 수열
 - [ ] 가장 긴 감소하는 부분 수열
 - [ ] 가장 긴 바이토닉 부분 수열
