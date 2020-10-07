@@ -67,5 +67,5 @@
 - [X] [가장 긴 바이토닉 부분 수열](https://github.com/Kwakcena/codeplus-SW-competency/pull/62)
 - [X] [연속합](https://github.com/Kwakcena/codeplus-SW-competency/pull/63)
 - [X] [연속합 2](https://github.com/Kwakcena/codeplus-SW-competency/pull/64)
-- [ ] 제곱수의 합
-- [ ] 합분해
+- [X] [제곱수의 합](https://github.com/Kwakcena/codeplus-SW-competency/pull/65)
+- [X] [합분해](https://github.com/Kwakcena/codeplus-SW-competency/pull/66)
