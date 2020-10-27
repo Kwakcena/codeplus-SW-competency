@@ -25,6 +25,8 @@
 - [X] [연산자 끼워넣기 (2)](https://github.com/Kwakcena/codeplus-SW-competency/pull/23)
 - [X] [집합](https://github.com/Kwakcena/codeplus-SW-competency/pull/25)
 
+- [X] [리모컨](https://github.com/Kwakcena/codeplus-SW-competency/pull/69)
+
 ## 브루트 포스 (N과 M 연습)
 - [X] [N과 M(1 ~ 4)](https://github.com/Kwakcena/codeplus-SW-competency/pull/42)
 - [X] [N과 M(5 ~ 8)](https://github.com/Kwakcena/codeplus-SW-competency/pull/43)
