@@ -1,32 +1,27 @@
-from itertools import product
+n = int(input())
+m = int(input())
+broken = [False] * 10
 
-buttons = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-N = input()
-
-buttons_number = int(input())
-broken_buttons = []
-if buttons_number != 0:
-    broken_buttons = list(input().split())
-
-possible_buttons = list(filter(lambda x: x not in broken_buttons, buttons))
+if m > 0:
+    for button in list(map(int, input().split())):
+        broken[button] = True
 
 
-def move_using_only_plus_minus_button():
-    return abs(100 - int(N))
+def possible(c):
+    numbers = list(str(c))
+    for number in numbers:
+        if broken[int(number)]:
+            return 0
+    else:
+        return len(numbers)
 
+# 100번에서 n번까지 +, -만 눌러서 채널을 바꿨을 때.
+ans = abs(n - 100)
+# 숫자를 누른 다음 +, - 버튼을 눌러 채널을 바꿨을 때.
+for c in range(0, 1000001):
+    button_count = possible(c)
+    if not button_count:
+        continue
+    ans = min(abs(c - n) + button_count, ans)
 
-def move_with_numbers_and_plus_minus():
-    result = 10 ** 6
-    for unit in range(1, 7):
-        numbers = list(product(possible_buttons, repeat=unit))
-        for number in numbers:
-            current_channel = ''.join(number)
-            button_count = abs(int(N) - int(current_channel)) + len(
-                current_channel)
-            if result > button_count:
-                result = button_count
-    return result
-
-
-print(min(move_with_numbers_and_plus_minus(),
-          move_using_only_plus_minus_button()))
+print(ans)
