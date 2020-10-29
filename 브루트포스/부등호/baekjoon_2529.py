@@ -17,7 +17,7 @@ for permute in permutations_list:
             else:
                 ok = False
                 break
-        if sign[i] == '>':
+        else:
             if permute[i] > permute[i + 1]:
                 ok = True
             else:
