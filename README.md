@@ -25,6 +25,14 @@
 - [X] [연산자 끼워넣기 (2)](https://github.com/Kwakcena/codeplus-SW-competency/pull/23)
 - [X] [집합](https://github.com/Kwakcena/codeplus-SW-competency/pull/25)
 - [X] [리모컨](https://github.com/Kwakcena/codeplus-SW-competency/pull/69) / python `product` 사용
+- [X] [카잉 달력](https://github.com/Kwakcena/codeplus-SW-competency/pull/70)
+- [X] [수 이어 쓰기1](https://github.com/Kwakcena/codeplus-SW-competency/pull/71)
+- [X] [부등호](https://github.com/Kwakcena/codeplus-SW-competency/pull/73)
+- [X] [단어 수학](https://github.com/Kwakcena/codeplus-SW-competency/pull/74) / python 리스트의 중복 원소 제거하기
+- [X] [스타트와 링크](https://github.com/Kwakcena/codeplus-SW-competency/pull/76)
+
+## 백트래킹
+- [X] [스타트와 링크](https://github.com/Kwakcena/codeplus-SW-competency/pull/79)
 
 ## 브루트 포스 (N과 M 연습)
 - [X] [N과 M(1 ~ 4)](https://github.com/Kwakcena/codeplus-SW-competency/pull/42)
