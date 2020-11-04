@@ -1,10 +1,10 @@
-#include<iostream>
-#include<vector>
-#include<string>
-#include<tuple>
-#include<deque>
-#include<queue>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <tuple>
+#include <deque>
+#include <queue>
+#include <algorithm>
 
 using namespace std;
 
@@ -13,41 +13,57 @@ bool check[10];
 char oper[10];
 vector<string> ans;
 
-bool ok(string num) {
-  for(int i=0; i<k; i++) {
-    if(oper[i] == '<' && (int)num[i] > (int)num[i + 1]) return false;
-    if(oper[i] == '>' && (int)num[i] < (int)num[i + 1]) return false;
+bool good(char current_number, char next_number, char op)
+{
+  if (op == '<')
+  {
+    if (current_number > next_number)
+      return false;
+  }
+  if (op == '>')
+  {
+    if (current_number < next_number)
+      return false;
   }
   return true;
 }
 
-void go(int index, string num) {
-  if(index == k + 1) {
-    if(ok(num)) {
-      ans.push_back(num);
-    }
+void go(int index, string num)
+{
+  if (index == k + 1)
+  {
+    ans.push_back(num);
     return;
   }
-  for(int i=0; i<=9; i++) {
-    if(check[i]) continue;
-    check[i] = true;
-    go(index + 1, num+to_string(i));
-    check[i] = false;
+  for (int i = 0; i <= 9; i++)
+  {
+    if (check[i])
+      continue;
+    if (index == 0 || good(num[index - 1], i + '0', oper[index - 1]))
+    {
+      check[i] = true;
+      go(index + 1, num + to_string(i));
+      check[i] = false;
+    }
   }
 }
-int main() {
+
+int main()
+{
   ios::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  
+
   cin >> k;
   string num;
-  for(int i = 0; i < k; i++) {
-    cin >> oper[i];  
+  for (int i = 0; i < k; i++)
+  {
+    cin >> oper[i];
   }
 
   go(0, num);
-  cout << ans[0] << endl;
+
   cout << ans[ans.size() - 1] << endl;
+  cout << ans[0] << endl;
   return 0;
 }
