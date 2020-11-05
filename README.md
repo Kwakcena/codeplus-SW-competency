@@ -33,6 +33,7 @@
 
 ## 백트래킹
 - [X] [스타트와 링크](https://github.com/Kwakcena/codeplus-SW-competency/pull/79)
+- [X] [부등호](https://github.com/Kwakcena/codeplus-SW-competency/pull/80)
 
 ## 브루트 포스 (N과 M 연습)
 - [X] [N과 M(1 ~ 4)](https://github.com/Kwakcena/codeplus-SW-competency/pull/42)
