@@ -11,19 +11,22 @@ int n, m;
 bool broken[10];
 
 int getButtonCount(int c) {
-  if(broken[c]) {
-    return 0;
-  }
-
-  int len = 0;
-  while(c) {
-    if(broken[c % 10]) {
+  if(c == 0) {
+    if(broken[c]) {
       return 0;
     }
     else {
-      len++;
-      c /= 10;
+      return 1;
     }
+  }
+
+  int len = 0;
+  while(c > 0) {
+    if(broken[c % 10]) {
+      return 0;
+    }
+    len++;
+    c /= 10;
   }
   return len;
 }
@@ -41,7 +44,7 @@ int main() {
     ans = -ans;
   }
 
-  for (int c = 5450; c <= 5460; c++) {
+  for (int c = 0; c <= 1000000; c++) {
     int count = getButtonCount(c);
     if(count == 0) continue;
 
