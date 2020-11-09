@@ -5,6 +5,7 @@ using namespace std;
 int n;
 int answer;
 bool field[15][15];
+bool visited_col[15];
 
 bool check(int row, int col) {
   for(int i=0; i<row; i++) {
@@ -38,11 +39,16 @@ void calc(int row) {
   }
 
   for(int col = 0; col < n; col++) {
+    if(visited_col[col]) continue;
     field[row][col] = true;
+    visited_col[col] = true;
+
     if(check(row, col)) {
       calc(row + 1);
     }
+
     field[row][col] = false;
+    visited_col[col] = false;
   }
 }
 
