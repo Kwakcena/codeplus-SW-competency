@@ -3,57 +3,54 @@
 using namespace std;
 
 int n;
-int answer;
 bool field[15][15];
-bool visited_col[15];
+
+// 위, \, / 방향의 대각선에 대해 퀸이 있는지 저장하는 배열
+bool check_col[15];
+bool check_dig1[40];
+bool check_dig2[40];
 
 bool check(int row, int col) {
-  for(int i=0; i<row; i++) {
-    if(field[i][col]) {
-      return false;
-    }
+  if(check_col[col]) {
+    return false;
   }
-
-  int y = row - 1, x = col - 1;
-  while(y >= 0 && x >= 0) {
-    if(field[y][x]) {
-      return false;
-    }
-    y--, x--;
+  if(check_dig1[row + col]) {
+    return false;
   }
-
-  y = row - 1, x = col + 1;
-  while(y >= 0 && x < n) {
-    if(field[y][x]) {
-      return false;
-    }
-    y--, x++;
+  if(check_dig2[row - col + n]) {
+    return false;
   }
   return true;
 }
 
-void calc(int row) {
+int calc(int row) {
   if(row == n) {
-    answer++;
-    return;
+    return 1;
   }
 
+  int cnt = 0;
   for(int col = 0; col < n; col++) {
-    if(visited_col[col]) continue;
-    field[row][col] = true;
-    visited_col[col] = true;
-
     if(check(row, col)) {
-      calc(row + 1);
-    }
+      // field[row][col]에 퀸을 놓았으면
+      // 해당 col, 대각선 방향은 퀸을 놓을 수 없음.
+      check_dig1[row + col] = true;
+      check_dig2[row - col + n] = true;
+      check_col[col] = true;
+      field[row][col] = true;
+      
+      cnt += calc(row + 1);
 
-    field[row][col] = false;
-    visited_col[col] = false;
+      check_dig1[row + col] = false;
+      check_dig2[row - col + n] = false;
+      check_col[col] = false;
+      field[row][col] = false;
+    }
   }
+
+  return cnt;
 }
 
 int main() {
   cin >> n;
-  calc(0);
-  cout << answer;
+  cout << calc(0) << endl;
 }
