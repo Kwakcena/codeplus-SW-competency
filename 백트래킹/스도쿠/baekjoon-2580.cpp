@@ -16,7 +16,7 @@ int square(int row, int col) {
 }
 
 void go(int index) {
-  if(index == zero_pos.size()) {
+  if(index == (int)zero_pos.size()) {
     for(int i=0; i<9; i++) {
       for(int j=0; j<9; j++) {
         cout << a[i][j] << " ";
@@ -24,7 +24,7 @@ void go(int index) {
       cout << endl;
     }
     cout << endl;
-    return;
+    exit(0);
   }
 
   int y = zero_pos[index].first;
