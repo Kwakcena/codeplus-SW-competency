@@ -6,13 +6,13 @@ def go(index):
     if index == 81:
         for row in a:
             print(' '.join(map(str, row)))
-        return
+        return True
 
     y = index // n
     x = index % n
 
     if a[y][x] != 0:
-        go(index + 1)
+        return go(index + 1)
     else:
         for i in range(1, 10):
             if check_col[x][i] is False and check_row[y][i] is False and \
@@ -21,11 +21,14 @@ def go(index):
                     i] = True
                 a[y][x] = i
 
-                go(index + 1)
+                if go(index + 1):
+                    return True
 
                 check_col[x][i] = check_row[y][i] = check_square[square(y, x)][
                     i] = False
                 a[y][x] = 0
+
+    return False
 
 
 n = 9
