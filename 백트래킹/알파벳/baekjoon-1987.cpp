@@ -1,53 +1,47 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
-
-int r, c;
-char a[21][21];
-bool check[150];
 
 int dy[] = {-1, 1, 0, 0};
 int dx[] = {0, 0, -1, 1};
 
-int ans;
-
-void go(int y, int x, int count)
+int go(vector<string> &board, vector<bool> &check, int y, int x)
 {
-  if (ans < count)
-  {
-    ans = count;
-  }
-
+  int ans = 0;
   for (int i = 0; i < 4; i++)
   {
     int ny = y + dy[i];
     int nx = x + dx[i];
 
-    if (0 <= ny && ny < r && 0 <= nx && nx < c)
+    if (0 <= ny && ny < board.size() && 0 <= nx && nx < board[0].size())
     {
-      if (check[a[ny][nx]] == false)
+      if (check[board[ny][nx] - 'A'] == false)
       {
-        check[a[ny][nx]] = true;
-        go(ny, nx, count + 1);
-        check[a[ny][nx]] = false;
+        check[board[ny][nx] - 'A'] = true;
+        int next = go(board, check, ny, nx);
+        if(ans < next) {
+          ans = next;
+        }
+        check[board[ny][nx] - 'A'] = false;
       }
     }
   }
+  return ans + 1;
 }
 
 int main()
 {
+  int r, c;
   cin >> r >> c;
+  vector<string> board(r);
   for (int i = 0; i < r; i++)
   {
-    for (int j = 0; j < c; j++)
-    {
-      cin >> a[i][j];
-    }
+    cin >> board[i];
   }
-
-  check[a[0][0]] = true;
-  go(0, 0, 1);
-  cout << ans;
+  vector<bool> check(26);
+  check[board[0][0] - 'A'] = true;
+  cout << go(board, check, 0, 0) << "\n";
   return 0;
 }
