@@ -1,33 +1,27 @@
 #include <iostream>
-#include <vector>
-#include <cstring>
-#include <string>
-#include <tuple>
-#include <deque>
 #include <queue>
-#include <map>
-#include <algorithm>
 
 using namespace std;
 
-int n, k;
 const int MAX = 200001;
-int check[MAX];
-map<int, int> dist;
+int n, k;
+bool check[MAX];
+int dist[MAX];
+int from[MAX];
 
-void print(int from, int to) {
-  if(from != to) {
-    print(from, dist[to]);
+void print(int n, int m) {
+  if(n != m) {
+    print(n, from[m]);
   }
-  cout << to << " ";
+  cout << m << " ";
 }
 
 void bfs()
 {
   queue<int> q;
   q.push(n);
-  memset(check, -1, sizeof(check));
-  check[n] = 0;
+  check[n] = true;
+  dist[n] = 0;
 
   while (!q.empty())
   {
@@ -38,25 +32,28 @@ void bfs()
     }
     q.pop();
 
-    if (now - 1 >= 0 && check[now - 1] == -1)
+    if (now - 1 >= 0 && check[now - 1] == false)
     {
       q.push(now - 1);
-      dist[now - 1] = now;
-      check[now - 1] = check[now] + 1;
+      dist[now - 1] = dist[now] + 1;
+      check[now - 1] = true;
+      from[now - 1] = now;
     }
 
-    if (now + 1 < MAX && check[now + 1] == -1)
+    if (now + 1 < MAX && check[now + 1] == false)
     {
       q.push(now + 1);
-      dist[now + 1] = now;
-      check[now + 1] = check[now] + 1;
+      dist[now + 1] = dist[now] + 1;
+      check[now + 1] = true;
+      from[now + 1] = now;
     }
 
-    if (now * 2 <= MAX && check[now * 2] == -1)
+    if (now * 2 <= MAX && check[now * 2] == false)
     {
       q.push(now * 2);
-      dist[now * 2] = now;
-      check[now * 2] = check[now] + 1;
+      dist[now * 2] = dist[now] + 1;
+      check[now * 2] = true;
+      from[now * 2] = now;
     }
   }
 }
@@ -70,7 +67,7 @@ int main()
   cin >> n >> k;
   bfs();
 
-  cout << check[k] << endl;
+  cout << dist[k] << endl;
   print(n, k);
   return 0;
 }
