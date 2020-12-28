@@ -1,17 +1,15 @@
 const solution = (array, commands) => {
   return commands.reduce((answers, command) => {
     const [start, end, number] = command;
-    const answer = findNumber(sortArray(sliceArray(array, start, end)), number);
+    const answer = findNumber(sliceArray(array, start, end), number);
     return [...answers, answer];
   }, [])
 }
 
 const sliceArray = (array, start, end) => {
-  return [...array].slice(start - 1, end);
-}
-
-const sortArray = (array) => {
-  return [...array].sort((a, b) => a - b);
+  return [...array]
+    .slice(start - 1, end)
+    .sort((a, b) => a - b);
 }
 
 const findNumber = (array, index) => {
@@ -28,15 +26,9 @@ test('solution', () => {
 })
 
 test('slice array', () => {
-  expect(sliceArray([1, 5, 2, 6, 3, 7, 4], 2, 5)).toEqual([5, 2, 6, 3]);
+  expect(sliceArray([1, 5, 2, 6, 3, 7, 4], 2, 5)).toEqual([2, 3, 5, 6]);
   expect(sliceArray([1, 5, 2, 6, 3, 7, 4], 4, 4)).toEqual([6]);
-  expect(sliceArray([1, 5, 2, 6, 3, 7, 4], 1, 7)).toEqual([1, 5, 2, 6, 3, 7, 4]);
-})
-
-test('sort array', () => {
-  expect(sortArray([5, 2, 6, 3])).toEqual([2, 3, 5, 6]);
-  expect(sortArray([6])).toEqual([6]);
-  expect(sortArray([1, 5, 2, 6, 3, 7, 4])).toEqual([1, 2, 3, 4, 5, 6, 7]);
+  expect(sliceArray([1, 5, 2, 6, 3, 7, 4], 1, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
 })
 
 test('find number', () => {
