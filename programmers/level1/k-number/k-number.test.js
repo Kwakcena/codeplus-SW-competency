@@ -11,7 +11,7 @@ const sliceArray = (array, start, end) => {
 }
 
 const sortArray = (array) => {
-  return [...array].sort();
+  return [...array].sort((a, b) => a - b);
 }
 
 const findNumber = (array, index) => {
